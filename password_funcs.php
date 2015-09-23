@@ -3,9 +3,6 @@
 	
 	if (isset($_POST['submit'])) {
 		$user_input = $_POST["number"];
-		if($user_input > 6) {
-			$style = "style = font-size: 16px;";
-		}
 	} else {
 		$user_input = rand(1, 5);
 	}

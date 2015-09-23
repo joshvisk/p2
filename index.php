@@ -31,7 +31,7 @@
         <h1 class="text-center">xkcd Password Generator</h1>
       </div>
       <div class="col-xs-12 pass-border">
-        <h2 class="text-center" <?php echo $style ?>><?php echo $word_array; ?></h2>
+        <h2 class="text-center" ><?php echo $word_array; ?></h2>
       </div>
       <div class="text-center col-lg-12"> 
         <form role="form" id="passwordform" class="text-center" action="index.php" method="post">
