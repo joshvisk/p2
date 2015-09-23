@@ -31,7 +31,7 @@
         <h1 class="text-center">xkcd Password Generator</h1>
       </div>
       <div class="col-xs-12 pass-border">
-        <h2 class="text-center"><?php echo $word_array; ?></h2>
+        <h2 class="text-center" <?php echo $style ?>><?php echo $word_array; ?></h2>
       </div>
       <div class="text-center col-lg-12"> 
         <form role="form" id="passwordform" class="text-center" action="index.php" method="post">
@@ -72,7 +72,8 @@
     <div class="row jumbotron">
       <div class="col-xs-12">
 				<p>28 bits of entropy.  Do you know what it means?  Neither do we.  This application was built to create complex passwords while still maintaining complexity.  The comic below easily identifies the current problems when creating secure passwords.</p>
-				<img src="img/xkcd.bmp" alt="xkcd password comic" />      </div>
+				<div><img class="img-responsive center-block" src="img/xkcd.bmp" alt="xkcd password comic" /></div>
+      </div>
     </div>
   </div>	
 </section>
