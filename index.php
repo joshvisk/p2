@@ -18,20 +18,26 @@
 </head>
 <body>
 
-<?php 
-	require("password_funs.php");
+<?php
+	require("password_funcs.php");
 ?>
-
-<!-- HEADER -->
 <header>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1 class="text-center">xchd Password Generator</h1>
-          <form id="form1" name="form1" method="post">
-            <label for="select"><label><?php echo $word_array; ?></label><br>Number of Words:</label>
-            <select name="select" id="select">
+&nbsp;
+</header>
+<section>
+  <div class="container">
+    <div class="row jumbotron">
+      <div class="col-xs-12">
+        <h1 class="text-center">xkcd Password Generator</h1>
+      </div>
+      <div class="col-xs-12 pass-border">
+        <h2 class="text-center"><?php echo $word_array; ?></h2>
+      </div>
+      <div class="text-center col-lg-12"> 
+        <form role="form" id="passwordform" class="text-center" action="index.php" method="post">
+          <div class="form-group text-left">
+            <label for="number">Number of words</label>
+            <select name="number" id="number">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -42,56 +48,36 @@
               <option value="8">8</option>
               <option value="9">9</option>
               <option value="10">10</option>
-            </select>s
-            <input type="submit" name="submit" id="submit" value="Generate">
-            <input type="reset" name="reset" id="reset" value="Reset">
-            <label for="textfield">Seperator:</label>
-            <input type="text" name="textfield" id="textfield">
-          </form>
-          <p>&nbsp;</p>
-          <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
-        </div>
+            </select>
+          </div>
+          <div class="form-group text-left">
+            <label for="seperator">Seperator</label>
+            <input type="text" class="form-control" id="separator" name="separator" placeholder="!@#)$%^&*(">
+            <span class="help-block" style="display: none;">Please enter a special character.</span>
+            <label><span style="color: #4F4F4F">&nbsp;(More than 1 value will be randomized within the password)</span></label></div>
+          <div class="form-group text-left">
+            <input type="checkbox" id="uppercase" name="uppercase"  />
+            <label for="uppercase">Make the first letter of each word uppercase.</label></div>      
+          <div class="form-group text-left">
+           <input type="checkbox" id="end_num" name="end_num"  />
+            <label for="end_num">Insert a number to the end.</label></div>
+            <button type="submit" name="submit" id="Submit" class="btn btn-primary btn-lg" style=" margin-top: 10px;">Generate Password</button>
+        </form>
       </div>
     </div>
-  </div>
-</header>
-<!-- / HEADER --> 
-
-<!--  SECTION-1 -->
+  </div>	
+</section>
 <section>
-  <div class="container ">
-    <div class="row">
-        <div class="col-lg-offset-3 col-xs-12 col-lg-6">
-          <div class="jumbotron">
-            <div class="row text-center">
-              <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h2>xchd Password Generator</h2>
-              </div>
-              <div class="text-center col-lg-12"> 
-                <!-- CONTACT FORM https://github.com/jonmbake/bootstrap3-contact-form -->
-                <form role="form" id="feedbackForm" class="text-center">
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                    <span class="help-block" style="display: none;">Please enter your name.</span></div>
-                  <div class="form-group">
-                    <label for="email">E-Mail</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
-                    <span class="help-block" style="display: none;">Please enter a valid e-mail address.</span></div>
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message"></textarea>
-                    <span class="help-block" style="display: none;">Please enter a message.</span></div>
-                  <span class="help-block" style="display: none;">Please enter a the security code.</span>
-                  <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg" style=" margin-top: 10px;"> Send</button>
-                </form>
-                <!-- END CONTACT FORM --> 
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="container">
+    <div class="row jumbotron">
+      <div class="col-xs-12">
+				<p>28 bits of entropy.  Do you know what it means?  Neither do we.  This application was built to create complex passwords while still maintaining complexity.  The comic below easily identifies the current problems when creating secure passwords.</p>
+				<img src="img/xkcd.bmp" alt="xkcd password comic" />      </div>
     </div>
-  </div>
+  </div>	
+</section>
+<section>
+
 </section>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 

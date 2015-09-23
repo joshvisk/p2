@@ -99,6 +99,11 @@ hr {
      -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
+.pass-border {
+	border: thin solid #4A4A4A;
+	margin-bottom: 20px;
+	background-color: #B1B1B1
+}
 pre {
   overflow: auto;
 }
@@ -1089,8 +1094,8 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
-	color: #C1BCBC;
-	background-color: #000;
+	color: #000000;
+	background-color: #585858;
 }
 input,
 button,
@@ -1273,7 +1278,8 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 30px;
+	font-size: 30px;
+	color: #000000;
 }
 h3,
 .h3 {
@@ -1581,7 +1587,7 @@ pre code {
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #515151;
+	background-color: #585858;
 }
 @media (min-width: 768px) {
   .container {
@@ -1618,7 +1624,7 @@ pre code {
   float: left;
 }
 .col-xs-12 {
-  width: 100%;
+	width: 100%;
 }
 .col-xs-11 {
   width: 91.66666667%;
@@ -2544,8 +2550,9 @@ output {
   color: #555;
 }
 .form-control {
-  display: block;
-  width: 100%;
+  /*display: block;*/
+	min-width: 100px;
+  width: 100px;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -4859,12 +4866,12 @@ a.badge:focus {
 .jumbotron {
 	padding: 30px 15px;
 	margin-bottom: 30px;
-	color: #CED32D;
-	background-color: #6B6B6B;
+	color: #000000;
+	background-color: #979797;
 }
 .jumbotron h1,
 .jumbotron .h1 {
-  color: inherit;
+  color: #EDFF3B;
 }
 .jumbotron p {
   margin-bottom: 15px;
